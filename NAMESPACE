@@ -2,4 +2,4 @@
 useDynLib(cpm)
 
 ## and two exported functions
-export(detectChangePoint,processStream,makeChangePointModel,processObservation,getStatistics,cpmReset,changeDetected)
+export(detectChangePoint,detectChangePointBatch,processStream,getBatchThreshold,makeChangePointModel,processObservation,getStatistics,cpmReset,changeDetected)

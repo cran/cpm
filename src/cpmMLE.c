@@ -49,6 +49,55 @@ void cpmMLEJoint(double *S, int *nS, double *W, int *nW, int *n, int *nb, double
 	}
 }
 
+
+void cpmMLEJointAdjusted(double *S, int *nS, double *W, int *nW, int *n, int *nb, double *Ds)
+{
+    int i,n1,n2;
+	double Sok,Son,Skn,mu1,mu2,C,G;
+
+
+	for (i = 1; i < (*nS-2); i++) {
+		n1 = i+1; n2 = *n - n1;
+		mu1 = S[n1-1]/n1; 
+		mu2 = (S[*n-1]-S[n1-1])/n2;
+		
+		Sok = W[n1-1]/(double)n1;
+		Son = W[*n-1]/(double)*n;
+		Skn = W[*n-1] - W[n1-1] - (n1*(*n-n1)*(mu1-mu2)*(mu1-mu2))/ *n;
+		Skn = Skn/(double)n2;
+		C = 1 + 11/(double)12 * (1/(double)n1 + 1/(double)n2 - 1/(double)*n) + (1/(double)(n1*n1) + 1/(double)(n2*n2) - 1/(double)(*n * *n));
+		G = (n1*log(Son/Sok) + n2*log(Son/Skn))/C;
+
+		Ds[i] = G;
+		//Rprintf("%d: %f \n ",i,Ts[i]);	
+	}
+
+    if (*nS < 10) {return;}
+
+    //now do the adjustment
+    int len = *nS;
+    double meanAdjustments[3] = {2.2989, 2.0814, 2.0335};
+    double sdAdjustments[3] = {2.3151,2.0871, 2.0368};
+
+    Ds[1] = (Ds[1] - meanAdjustments[0])/sdAdjustments[0];
+    Ds[len-3] = (Ds[len-3] - meanAdjustments[0])/sdAdjustments[0];
+    Ds[2] = (Ds[2] - meanAdjustments[1])/sdAdjustments[1];
+    Ds[len-4] = (Ds[len-4] - meanAdjustments[1])/sdAdjustments[1];
+    Ds[3] = (Ds[3] - meanAdjustments[2])/sdAdjustments[2];
+    Ds[len-5] = (Ds[len-5] - meanAdjustments[2])/sdAdjustments[2];
+
+    //now convert back to chi-square
+    double truemean = 2;
+    double truesd = 2;
+
+    Ds[1] = (Ds[1] * truesd) + truemean;
+    Ds[2] = (Ds[2] * truesd) + truemean;
+    Ds[3] = (Ds[3] * truesd) + truemean;
+    Ds[len-3] = (Ds[len-3] * truesd) + truemean;
+    Ds[len-4] = (Ds[len-4] * truesd) + truemean;
+    Ds[len-5] = (Ds[len-5] * truesd) + truemean;
+}
+
 //the W here is the V in hte paper i think 
 
 

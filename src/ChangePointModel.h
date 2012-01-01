@@ -11,7 +11,7 @@ class ChangePointModel {
 		std::vector<std::vector<double> > m_statistics; 
 		std::vector<double> m_thresholds;
 		int m_startup;
-		int n;		
+		long int n;		
 
     	ChangePointModel();
 		

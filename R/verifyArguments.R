@@ -3,7 +3,7 @@
 #is the standard form of the CPM
 
 verifyArguments <- function(cpmType, ARL0, startup, lambda) {
-    implementedCpms <- c("MW","Mood","KS","CVM","Student","Bartlett","LP","FET","Joint")
+    implementedCpms <- c("MW","Mood","KS","CVM","Student","Bartlett","LP","FET","Joint","JointAdjusted", "JointHawkins", "Poisson", "Exponential", "ExponentialAdjusted")
     implementedARLs <- c(seq(100,900,by=100),370,seq(1000,9000,by=1000),seq(10000,50000,by=10000))
     implementedLambdas <- c(0.1,0.3)
     
@@ -38,10 +38,6 @@ verifyArguments <- function(cpmType, ARL0, startup, lambda) {
         return(list(success=FALSE,cpmType=cpmType))
     }
     
-    if (startup < 20) {
-        print("Error: startup must be at least 20")
-        return(list(success=FALSE,cpmType=cpmType))
-    }
     return(list(success=TRUE,cpmType=cpmType))
 }
 

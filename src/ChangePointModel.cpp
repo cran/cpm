@@ -94,7 +94,7 @@ void ChangePointModel::cpmMLE(double &maxvalue, int &maxindex) {
 	Us.reserve(n);
 	cpmMLEaux(Us);
 
-	Us[0]=0; Us[Us.size()-1]=0; Us[Us.size()-2]=0;
+	//Us[0]=0; Us[Us.size()-1]=0; Us[Us.size()-2]=0;
     
     maxvalue = 0;
     maxindex = 0;

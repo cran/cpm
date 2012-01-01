@@ -28,7 +28,8 @@ void ChangePointModelT::updateStatistics(const double &obs) {
 	
 
 void ChangePointModelT::cpmMLEaux(std::vector <double> &Us) {
-	int i,j;
+	int i;
+    double j,nn = (double) n;
 	double sigma = n-2; sigma=sqrt(sigma/(sigma-2));
 	double temp,E;	
 	
@@ -36,11 +37,12 @@ void ChangePointModelT::cpmMLEaux(std::vector <double> &Us) {
 
 	int sz = m_statistics[0].size();	
     Us.push_back(0);
+    
 	for (i = 1 ; i < sz-2 ; i++) {
-		j=i+1;
+		j=(double)i+1;
 		temp = n*m_statistics[0][i] - j*m_statistics[0].back();
-		E = temp*temp / (n*j*(n-j));
-		Us.push_back(sqrt( (n-2)*E / (m_statistics[1].back()-E))/sigma);
+		E = temp*temp / (nn*j*(nn-j));
+		Us.push_back(sqrt( (nn-2)*E / (m_statistics[1].back()-E))/sigma);
 	}
     Us.push_back(0);
     Us.push_back(0);
