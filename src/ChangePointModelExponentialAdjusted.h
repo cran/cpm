@@ -1,4 +1,3 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_EXPONENTIAL_ADJUSTED
 #define CHANGE_POINT_MODEL_EXPONENTIAL_ADJUSTED
@@ -6,6 +5,8 @@ using namespace std;
 #include "ChangePointModel.h"
 #include "ChangePointModelExponential.h"
 #include <vector>
+using namespace std;
+
 
 class ChangePointModelExponentialAdjusted : public ChangePointModelExponential {
 	public:

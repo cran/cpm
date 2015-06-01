@@ -6,6 +6,8 @@
 \description{An implementation of several different change point models (CPMs) for performing both parametric and nonparametric change detection on univariate data streams.}
 \details{The CPM framework is an approach to sequential change detection (also known as Phase II process monitoring) which allows standard statistical hypothesis tests to be deployed sequentially. The main two general purpose functions in the package are \code{detectChangePoint} and \code{processStream} for detecting single and multiple change points respectively. The remainder of the functions allow for more precise control over the change detection procedure. To cite this R package in a research paper, please use \code{citation('cpm')} to obtain the reference, and BibTeX entry.
 
+Note: this package has a manual titled "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package" available from www.gordonjross.co.uk, which contains a full description of all the functions and algorithms in the package, as well as detailed instructions on how to use it. 
+
 
 A Brief CPM Overview
 

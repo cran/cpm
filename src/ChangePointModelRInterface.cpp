@@ -1,4 +1,3 @@
-using namespace std;
 
 #include <R.h>
 #include <vector>
@@ -21,6 +20,7 @@ using namespace std;
 #include "ChangePointModelPoisson.h"
 #include "ChangePointModelExponential.h"
 #include "ChangePointModelExponentialAdjusted.h"
+using namespace std;
 
 
 extern "C" {
@@ -116,7 +116,6 @@ extern "C" {
 			Rprintf("Error: Change point model type not supported\n");
 			return;
 		}
-		
         std::vector<int> cpsv, dtsv;
 		cpm->processStream(xv, Dsv, cpsv,dtsv);	
         *numChanges = dtsv.size();

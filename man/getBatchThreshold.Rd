@@ -6,7 +6,7 @@
 	
      When performing Phase I analysis within the CPM framework for a sequence of length n, the null hypothesis of no change is rejected if \eqn{D_n > h_n} for some threshold \eqn{h_n}. Typically this threshold is chosen to be the upper alpha quantile of the distribution of \eqn{D_n} under the null hypothesis of no change. Given a particular choice of alpha and n, this function returns the associated \eqn{h_n} threshold. Because these thresholds are laborious to compute, the package contains pre-computed values of \eqn{h_n} for alpha = 0.05, 0.01, 0.005 and 0.001, and for \eqn{n < 10000}.
 
-	For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please use \code{vignette("cpm")}
+	For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please consult the package manual "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package" available from www.gordonjross.co.uk
     }
     
     \usage{

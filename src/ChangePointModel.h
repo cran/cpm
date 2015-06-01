@@ -1,9 +1,9 @@
+#include <vector>
 using namespace std;
  
 #ifndef CHANGE_POINT_MODEL
 #define CHANGE_POINT_MODEL
 
-#include <vector>
 
 class ChangePointModel {
 	public:
@@ -14,6 +14,7 @@ class ChangePointModel {
 		long int n;		
 
     	ChangePointModel();
+    	virtual ~ChangePointModel() = 0;
 		
 		void processPoint(const double &obs);
 		void processStream(const std::vector<double> &x, std::vector<double> &Us, std::vector<int> &cps, std::vector<int> &dts);

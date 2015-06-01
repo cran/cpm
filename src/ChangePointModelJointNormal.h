@@ -1,4 +1,3 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_JOINT_NORMAL
 #define CHANGE_POINT_MODEL_JOINT_NORMAL
@@ -6,6 +5,8 @@ using namespace std;
 #include "ChangePointModel.h"
 #include "ChangePointModelT.h"
 #include <vector>
+using namespace std;
+
 
 class ChangePointModelJointNormal : public ChangePointModelT {
 	public:

@@ -1,10 +1,10 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_T
 #define CHANGE_POINT_MODEL_T
 
 #include "ChangePointModel.h"
 #include <vector>
+using namespace std;
 
 class ChangePointModelT : public ChangePointModel {
 	public:

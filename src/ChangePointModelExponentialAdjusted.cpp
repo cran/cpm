@@ -17,9 +17,10 @@ ChangePointModelExponentialAdjusted::ChangePointModelExponentialAdjusted(const s
 
 void ChangePointModelExponentialAdjusted::cpmMLEaux(std::vector <double> &Us) {
 	int i,sz,k;
-	double n0,n1,s0,s1,K,temp,BC;
+	double n0,n1,s0,s1,K,temp,BC,dsz;
 	Us.reserve(m_statistics[0].size());	
 	sz = m_statistics[0].size();
+  dsz = (double) sz;
     //Us.push_back(0);
     
 	//for (i = 1 ; i < sz-2 ; i++) {
@@ -29,9 +30,9 @@ void ChangePointModelExponentialAdjusted::cpmMLEaux(std::vector <double> &Us) {
 		n1 = (double) sz-n0;
 		s0 = (double) m_statistics[0][i];
 		s1 = (double) m_statistics[0].back() - s0;
-		K = sz*log((double)sz) - n0*log((double)n0)-n1*log((double)n1);
+		K = sz*log(dsz) - n0*log(n0)-n1*log(n1);
 		//temp = -sz*log(s0+s1) + n0*log(s0) + n1*log(s1)+K;
-		temp = sz*log(sz/(s0+s1)) - n0*log(n0/s0) - n1*log(n1/s1);
+		temp = sz*log(dsz/(s0+s1)) - n0*log(n0/s0) - n1*log(n1/s1);
 		
 		//BC = (k*digamma[k] + (sz-k)*digamma[sz-k] - sz*digamma[sz] + sz*log(sz) - k*log(k) - k*log(sz-k));
 		BC = k*digamma[k] + (sz-k)*digamma[sz-k] - sz*digamma[sz] + K; // is this right? is it really the same as K?

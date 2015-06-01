@@ -1,6 +1,6 @@
 #include "ChangePointModelT.h"
 #include <cmath> 
-
+#include <R.h>
 ChangePointModelT::ChangePointModelT() {
 	m_startup=20;
 }
@@ -15,13 +15,11 @@ ChangePointModelT::ChangePointModelT(const std::vector<double> &thresholds, int 
 void ChangePointModelT::updateStatistics(const double &obs) {
 	double S = obs;
 	double W = 0;
-	
 	if (m_statistics[0].size() > 0) {
 		S = obs + m_statistics[0].back(); //last element of the S list
 		double temp =  (n-1)*obs - m_statistics[0].back();
 		W = m_statistics[1].back() + temp*temp / (n*(n-1));	
 	}
-	
 	m_statistics[0].push_back(S);
 	m_statistics[1].push_back(W);
 }

@@ -1,10 +1,11 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_FET
 #define CHANGE_POINT_MODEL_FET
 
 #include "ChangePointModel.h"
 #include <vector>
+using namespace std;
+
 
 class ChangePointModelFET : public ChangePointModel {
 	public:

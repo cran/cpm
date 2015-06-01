@@ -1,10 +1,10 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_MOOD
 #define CHANGE_POINT_MODEL_MOOD
 
 #include "ChangePointModelWithRanks.h"
 #include <vector>
+using namespace std;
 
 class ChangePointModelMood : public ChangePointModelWithRanks {
 	public:

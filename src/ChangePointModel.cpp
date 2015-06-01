@@ -12,6 +12,8 @@ ChangePointModel::ChangePointModel() {
 	n=0;
 }
 
+ChangePointModel::~ChangePointModel() {}
+
 void ChangePointModel::processPoint(const double &obs) {
 	n++;		
 	updateStatistics(obs);	//add to window
@@ -20,35 +22,36 @@ void ChangePointModel::processPoint(const double &obs) {
 
 void ChangePointModel::processStream(const std::vector<double> &x, std::vector<double> &Us, std::vector<int> &cps, std::vector<int> &dts) {
 	double U;
-    int maxindex, dt, cp, i;
+  int maxindex, dt, cp, i;
 	int lastChange = 0;
 	int sz = x.size();
 	
 	double threshold = 0;
 	int thresholdLength = m_thresholds.size();
     i = -1;
-    while (i < sz) {
+    while (i < sz-1) {
     	++i;
+        //Rprintf("i:%d len:%d\n",i,(int)x.size());
         this->processPoint(x[i]);
 
-		if (n >= m_startup) {
-			this->cpmMLE(U,maxindex);
-			//Us.push_back(U);
-
-			if (thresholdLength==0) {threshold=99999.0;}
-			else if (n >= thresholdLength) {threshold = m_thresholds[thresholdLength-1];}
-			else {threshold = m_thresholds[n-1];}
-
-			//change found, we must reset
-			if (U > threshold) {
-				dt = i + 1;
-				cp = lastChange + maxindex + 1;
-				lastChange = cp;
-				i = cp-1; //start from observation after change
-				dts.push_back(dt);
-                cps.push_back(cp);
-				this->reset();			
-            }
+		  if (n >= m_startup) {
+  			this->cpmMLE(U,maxindex);
+  			//Us.push_back(U);
+  
+  			if (thresholdLength==0) {threshold=99999.0;}
+  			else if (n >= thresholdLength) {threshold = m_thresholds[thresholdLength-1];}
+  			else {threshold = m_thresholds[n-1];}
+  
+  			//change found, we must reset
+  			if (U > threshold) {
+  				dt = i + 1;
+  				cp = lastChange + maxindex + 1;
+  				lastChange = cp;
+  				i = cp-1; //start from observation after change
+  				dts.push_back(dt);
+          cps.push_back(cp);
+  				this->reset();			
+        }
 		} else {
 			//Us.push_back(0);
 		}
@@ -57,7 +60,7 @@ void ChangePointModel::processStream(const std::vector<double> &x, std::vector<d
 
 void ChangePointModel::detectChange(const std::vector<double> &x, std::vector<double> &Us, int &cp, int &dt) {
 	double U;
-    int maxind;
+  int maxind;
 
 	int sz = x.size();
 

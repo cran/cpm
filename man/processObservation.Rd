@@ -7,7 +7,7 @@
        
            Note that this function is part of the S4 object section of the \code{cpm} package, which allows for more precise control over the change detection process. For many simple change detection applications this extra complexity will not be required, and the \code{detectChangePoint} and \code{processStream} functions should be used instead.
            
-	For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please use \code{vignette("cpm")}
+	For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please consult the package manual "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package" available from www.gordonjross.co.uk
     }
     
     \usage{

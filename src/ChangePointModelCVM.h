@@ -1,10 +1,11 @@
+#include <vector>
 using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_CVM
 #define CHANGE_POINT_MODEL_CVM
 
 #include "ChangePointModelWithOrders.h"
-#include <vector>
+
 
 class ChangePointModelCVM : public ChangePointModelWithOrders {
 	public:

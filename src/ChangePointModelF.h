@@ -1,4 +1,3 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_F
 #define CHANGE_POINT_MODEL_F
@@ -6,6 +5,7 @@ using namespace std;
 #include "ChangePointModel.h"
 #include "ChangePointModelT.h"
 #include <vector>
+using namespace std;
 
 class ChangePointModelF : public ChangePointModelT {
 	public:

@@ -1,10 +1,10 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_POISSON
 #define CHANGE_POINT_MODEL_POISSON
 
 #include "ChangePointModel.h"
 #include <vector>
+using namespace std;
 
 class ChangePointModelPoisson : public ChangePointModel {
 	public:

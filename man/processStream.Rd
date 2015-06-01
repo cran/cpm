@@ -7,7 +7,7 @@
        
        Unlike the \code{detectChange} function, \code{processStream} does not terminate and return when a change point is encountered. Instead, a new CPM is initialised immediately following the change point, with all previous observations being discarded. The monitoring then continues, starting from the first observation after the change point. If more change points are discovered later in the sequence, the CPM is again reinitialised after each one. In this way, the whole sequence of observations will be processed and multiple change points may be detected.        
        
-       For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please use \code{vignette("cpm")}
+       For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please consult the package manual "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package" available from www.gordonjross.co.uk
     }
      \usage{
      processStream(x, cpmType, ARL0=500, startup=20, lambda=NA)

@@ -1,0 +1,15 @@
+citHeader("To cite cpm in publications use:")
+
+citEntry(entry = "Article",
+  title        = "Parametric and Nonparametric Sequential Change Detection in {R}: The {cpm} Package",
+  author       = personList(as.person("Gordon J. Ross")),
+  journal      = "Journal of Statistical Software",
+  year         = "2015",
+
+
+  textVersion  =
+  paste("Gordon J. Ross (2015).",
+        "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package.",
+        "Journal of Statistical Software.")
+)
+

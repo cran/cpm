@@ -1,4 +1,3 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_JOINT_NORMAL_HAWKINS
 #define CHANGE_POINT_MODEL_JOINT_NORMAL_HAWKINS
@@ -6,6 +5,7 @@ using namespace std;
 #include "ChangePointModel.h"
 #include "ChangePointModelT.h"
 #include <vector>
+using namespace std;
 
 class ChangePointModelJointNormalHawkins : public ChangePointModelT {
 	

@@ -1,4 +1,3 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_LEPAGE
 #define CHANGE_POINT_MODEL_LEPAGE
@@ -6,6 +5,7 @@ using namespace std;
 #include "ChangePointModelMW.h"
 #include "ChangePointModelMood.h"
 #include <vector>
+using namespace std;
 
 class ChangePointModelLepage : public ChangePointModel {
 	public:

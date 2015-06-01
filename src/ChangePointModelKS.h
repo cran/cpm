@@ -1,10 +1,10 @@
-using namespace std;
 
 #ifndef CHANGE_POINT_MODEL_KS
 #define CHANGE_POINT_MODEL_KS
 
 #include "ChangePointModelWithOrders.h"
 #include <vector>
+using namespace std;
 
 class ChangePointModelKS : public ChangePointModelWithOrders {
 	public:

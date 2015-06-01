@@ -5,7 +5,7 @@
      \description{
        This function is used to detect a single change point in a sequence of observations using the Change Point Model (CPM) framework for sequential (Phase II) change detection. The observations are processed in order, starting with the first, and a decision is made after each observation whether a change point has occurred. If a change point is detected, the function returns with no further observations being processed. A full description of the CPM framework can be found in the papers cited in the reference section.
     
-	For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please use \code{vignette("cpm")}
+	For a fuller overview of this function including a description of the CPM framework and examples of how to use the various functions, please consult the package manual "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package" available from www.gordonjross.co.uk
     }
     
      \usage{
