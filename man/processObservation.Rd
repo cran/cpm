@@ -1,7 +1,7 @@
 \name{processObservation}
      \alias{processObservation}
      \title{Process an Observation Using a CPM S4 Object.}
-     \author{Gordon J. Ross \email{gordon.ross03@imperial.ac.uk}}
+     \author{Gordon J. Ross \email{gordon@gordonjross.co.uk}}
      \description{
        Updates the state of an existing Change Point Model (CPM) S4 object, by processing a single observation. This effectively computes the \eqn{D_{k,t+1}} statistics, for a CPM that had previously seen \eqn{t} observations. When the function is called, several events happen. First, the function returns a CPM object which is identical the CPM object passed to the function, except that the observation passed as an argument has been processed and added to the state. Second, the CPM computes the \eqn{D_{t+1}} statistic and compares it to its stored sequence of thresholds. If a change is detected, then this is stored in the state of the CPM, and a call to \code{changeDetected} will now return \code{TRUE}.
        

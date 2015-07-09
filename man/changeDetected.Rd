@@ -1,7 +1,7 @@
 \name{changeDetected}
      \alias{changeDetected}
      \title{Tests Whether a CPM S4 Object Has Encountered a Change Point}
-     \author{Gordon J. Ross \email{gordon.ross03@imperial.ac.uk}}
+     \author{Gordon J. Ross \email{gordon@gordonjross.co.uk}}
      \description{
        Tests whether an existing Change Point Model (CPM) S4 object has encountered a change point. It returns \code{TRUE} if a change has been encountered, otherwise \code{FALSE}.
        

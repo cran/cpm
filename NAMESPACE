@@ -5,3 +5,4 @@ useDynLib(cpm)
 export(detectChangePoint,detectChangePointBatch,processStream,getBatchThreshold,makeChangePointModel,processObservation,getStatistics,cpmReset,changeDetected)
 
 import(methods)
+import(stats)

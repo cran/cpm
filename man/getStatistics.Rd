@@ -1,7 +1,7 @@
 \name{getStatistics}
      \alias{getStatistics}
      \title{Returns the Test Statistics Associated With A CPM S4 Object}
-     \author{Gordon J. Ross \email{gordon.ross03@imperial.ac.uk}}
+     \author{Gordon J. Ross \email{gordon@gordonjross.co.uk}}
      \description{
        Returns the \eqn{D_{k,t}} statistics associated with an existing Change Point Model (CPM) S4 object. These statistics depend on the state of the object, which depends on the observations which have been processed to date. Calling this function returns the most recent set of statistics, which were generated after the previous observation was processed. 
     

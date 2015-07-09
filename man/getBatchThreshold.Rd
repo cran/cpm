@@ -1,7 +1,7 @@
 \name{getBatchThreshold}
      \alias{getBatchThreshold}
      \title{Returns the Threshold Associated with a Type I Error Probability .}
-     \author{Gordon J. Ross \email{gordon.ross03@imperial.ac.uk}}
+     \author{Gordon J. Ross \email{gordon@gordonjross.co.uk}}
      \description{
 	
      When performing Phase I analysis within the CPM framework for a sequence of length n, the null hypothesis of no change is rejected if \eqn{D_n > h_n} for some threshold \eqn{h_n}. Typically this threshold is chosen to be the upper alpha quantile of the distribution of \eqn{D_n} under the null hypothesis of no change. Given a particular choice of alpha and n, this function returns the associated \eqn{h_n} threshold. Because these thresholds are laborious to compute, the package contains pre-computed values of \eqn{h_n} for alpha = 0.05, 0.01, 0.005 and 0.001, and for \eqn{n < 10000}.
@@ -48,18 +48,20 @@
 
 \references{
   Hawkins, D. , Zamba, K. (2005) -- A Change-Point Model for a Shift in Variance, \emph{Journal of Quality Technology}, 37, 21-31
-  
+
   Hawkins, D. , Zamba, K. (2005b) -- Statistical Process Control for Shifts in Mean or Variance Using a Changepoint Formulation, \emph{Technometrics}, 47(2), 164-173
   
   Hawkins, D., Qiu, P., Kang, C. (2003) -- The Changepoint Model for Statistical Process Control, \emph{Journal of Quality Technology}, 35, 355-366. 
-  
+    
   Ross, G. J., Tasoulis, D. K., Adams, N. M. (2011) -- A Nonparametric Change-Point Model for Streaming Data, \emph{Technometrics}, 53(4)
   
-  Ross, G. J., Adams, N. M. (2012) -- Two Nonparametric Control Charts for Detecting Arbitary Distribution Changes, \emph{Journal of Quality Technology}, In Press
+  Ross, G. J., Adams, N. M. (2012) -- Two Nonparametric Control Charts for Detecting Arbitary Distribution Changes, \emph{Journal of Quality Technology}, 44:102-116
   
   Ross, G. J., Adams, N. M. (2013) -- Sequential Monitoring of a Proportion, \emph{Computational Statistics}, 28(2)
 
- Ross, G. J., (2013) -- Sequential Change Detection in the Presence of Unknown Parameters (to appear)
+  Ross, G. J., (2014) -- Sequential Change Detection in the Presence of Unknown Parameters, \emph{Statistics and Computing} 24:1017-1030
+  
+  Ross, G. J., (2015) -- Parametric and Nonparametric Sequential Change Detection in R: The cpm Package, \emph{Journal of Statistical Software}, forthcoming
 
 }     
 

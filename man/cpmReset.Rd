@@ -1,7 +1,7 @@
 \name{cpmReset}
      \alias{cpmReset}
      \title{Resets a CPM S4 Object}
-     \author{Gordon J. Ross \email{gordon.ross03@imperial.ac.uk}}
+     \author{Gordon J. Ross \email{gordon@gordonjross.co.uk}}
      \description{
        Resets an existing Change Point Model (CPM) S4 object. Typically it will be used in situations where the CPM is processing a stream, and has encountered a change point. If the stream may contain multiple change points, the typical reaction procedure after detecting a change is to reset the CPM. This involves clearing its memory of all the observations prior to the change point, so that monitoring can be resumed starting with the next observation after the change point.
     
