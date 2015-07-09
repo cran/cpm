@@ -5,11 +5,15 @@ citEntry(entry = "Article",
   author       = personList(as.person("Gordon J. Ross")),
   journal      = "Journal of Statistical Software",
   year         = "2015",
-
+  volume       = "66",
+  number       = "3",
+  pages        = "1--20",
+  url          = "http://www.jstatsoft.org/v66/i03/",
 
   textVersion  =
   paste("Gordon J. Ross (2015).",
         "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package.",
-        "Journal of Statistical Software.")
+        "Journal of Statistical Software, 66(3), 1-20.",
+        "URL http://www.jstatsoft.org/v66/i03/.")
 )
 

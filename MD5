@@ -1,4 +1,4 @@
-a539e6f2c42ea2943c6968e72f25cf57 *DESCRIPTION
+b9321c2d58aadb896f0878ed1647124e *DESCRIPTION
 b6bc9734a559d5ec613c020c278dc044 *NAMESPACE
 fee13f01a32333fa7e80d76e43524929 *R/ChangePointModel.R
 e1252decd4b9ab7f9725ce5ce872a1e3 *R/ChangePointModelBartlett.R
@@ -21,10 +21,10 @@ b9da7bab6d1db83b1aa762cccdaa8d64 *R/processObservation.R
 189ae2b28dc69f4fd6d509b5d985dd46 *R/sysdata.rda
 ac1cfc68e1a5baeba439563752083ac9 *R/verifyArguments.R
 a323bc47848075f9336474895ad603a8 *data/ForexData.rdata
-f9e9e725de6d0bdbae23874b47402648 *inst/CITATION
+5d55c0a4bc32f4be1053fb28e4fe15d0 *inst/CITATION
 55459fc0ddb1d265439267ee5c90580a *man/ForexData.Rd
 35232b779508f3ba9eb4680f838198f0 *man/changeDetected.Rd
-37ed914c4b06ee5e386409581cd7ce6b *man/cpmPackage.Rd
+70c3995f2bba05e241a3796696624a53 *man/cpmPackage.Rd
 bc8622ddf049bf7294e118543df7cdb3 *man/cpmReset.Rd
 bd50f5390f808d297256ed113e5a5693 *man/detectChangePoint.Rd
 0d4a969c1362825efff7909f65f4a24b *man/detectChangePointBatch.Rd

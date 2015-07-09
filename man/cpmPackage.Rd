@@ -8,7 +8,7 @@
 
 Note: this package has a manual titled "Parametric and Nonparametric Sequential Change Detection in R: The cpm Package" available from www.gordonjross.co.uk, which contains a full description of all the functions and algorithms in the package, as well as detailed instructions on how to use it. 
 
-If you would like to cite this package, the citation information is "G. J. Ross - Parametric and Nonparametric Sequential Change Detection in R: The cpm Package, Journal of Statistical Software, 2015"
+If you would like to cite this package, the citation information is "G. J. Ross - Parametric and Nonparametric Sequential Change Detection in R: The cpm Package, Journal of Statistical Software, 2015, 66(3), 1-20"
 
 
 A Brief CPM Overview
