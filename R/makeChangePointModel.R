@@ -1,7 +1,7 @@
 makeChangePointModel <- function(cpmType,ARL0=500,startup=20,lambda=NA) {
     args <- verifyArguments(cpmType,ARL0,startup,lambda)
     if (args$success==FALSE) {
-        return
+        return()
     }
     cpmType <- args$cpmType
     

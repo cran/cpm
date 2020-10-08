@@ -1,11 +1,11 @@
 detectChangePointBatch <- function(x,cpmType, alpha=0.05, lambda=NA) {
     if (length(x) < 5) {
         print("Error: Batch change detectoin requires a sequence of length 5 or greater")
-        return
+        return()
     }
     args <- verifyArguments(cpmType,500,20,lambda)
     if (args$success==FALSE) {
-        return
+        return()
     }
     
     cpmType <- args$cpmType
